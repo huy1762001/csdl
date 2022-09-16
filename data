@@ -1,0 +1,77 @@
+Chuc nang
+
+1.Them/sua/xoa bai viet
+	1.1 Article
+	-id
+	-author
+	-title
+	-content
+	-category
+	-createdAT
+	-updateAt
+	-tags
+	-viewcount
+	1.2 category model
+	-id
+	-name
+	1.3 them bai viet
+	-input title, content, tag, categoryid, authorID
+	1.4 sua bai viet
+	-input title, content, tags, categoryID
+	1.5 xoa
+	1.6 lay noi dung bai viet giua tren id
+	-input id
+	-output: article
+	1.7 lay danh sach bai viet cua category
+	-input: categoryid
+	-output: array of article + paying
+	1.8 lay danh sach bai viet dua tren tags 
+	-Input: tags
+	-output: 1.7
+	1.9 lay danh sach bai viet theo userID
+	-user: id
+	output: 1.8
+	
+2.Trang profile
+	2.1 danh sach bai viet 
+3.User manager
+	3.1. user model
+	- username-nvarchar
+	- password- varchar
+	- userID- int
+	- email- varchar
+	- displayname- nvarchar
+	- status- int (-1:banned, 0: deactive, 1:active)
+
+	3.2 dk tai khoan
+	input: username, password, email
+	status=1
+	3.3. reset mat khau
+	input: username/email
+	output: gui email resert mat khau
+	3.4. dang nhap
+	input: username, password
+	output: json web taken 
+	3.5 dang xuat
+	3.6 show danh sach user
+4. comment
+	4.1 comment model
+	-id
+	-authorid
+	-createdAt
+	content
+	-updateAt
+	4.2 them comment vao article
+	-input: content
+	4.3 sua comment
+	input: content
+	4.4: xoa comment
+		
+5.reaction
+	5.1 title bai viet
+	input: authorId,  articleId
+6.share
+	6.1 build link share
+7search
+	-search: tags, category,
+	-username, 
